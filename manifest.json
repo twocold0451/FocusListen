@@ -1,7 +1,7 @@
  {
-	"name": "Focus",
+	"name": "FocusListen",
     "version": "1.0",
-    "description": "Build an Extension!",
+    "description": "网易云音乐屏蔽评论",
 	"background": {
       "scripts": ["background.js"],
       "persistent": false
@@ -11,10 +11,11 @@
 		"storage",
 		"declarativeContent",
 		"http://*/*",
+		"https://*/*",
 		"tabs"
 	],
 	"page_action": {
-      "default_popup": "popup.html",
+      //"default_popup": "popup.html",
 	  "default_icon": {
         "16": "images/get_started16.png",
         "32": "images/get_started32.png",
@@ -31,9 +32,9 @@
     },
 	"content_scripts": [
 		{
-		  "matches": ["https://music.163.com/#/song?id=*"], // try with "http://localhost:*/*" or "http://localhost:*" 
+		  "matches": ["http[s]*?://music.163.com[/#]*?/song\?id=*?"], // try with "http://localhost:*/*" or "http://localhost:*" 
 		  
-		  "js": ["content_script.js"]
+		  "js": ["jquery.min.js","content_script.js"]
 		}
 	],
 	"manifest_version": 2
