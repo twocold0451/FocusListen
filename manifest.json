@@ -32,8 +32,7 @@
     },
 	"content_scripts": [
 		{
-		  "matches": ["http[s]*?://music.163.com[/#]*?/song\?id=*?"], // try with "http://localhost:*/*" or "http://localhost:*" 
-		  
+		  "matches": ["http://music.163.com/*song*id=*"],		  
 		  "js": ["jquery.min.js","content_script.js"]
 		}
 	],
