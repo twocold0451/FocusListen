@@ -1,2 +1,1 @@
-
 $("#comment-box").hide();

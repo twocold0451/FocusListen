@@ -32,7 +32,9 @@
     },
 	"content_scripts": [
 		{
-		  "matches": ["http://music.163.com/*song*id=*"],		  
+		  "matches": ["http://music.163.com/*"],
+		  "run_at":"document_end",
+		  "all_frames": true,
 		  "js": ["jquery.min.js","content_script.js"]
 		}
 	],
